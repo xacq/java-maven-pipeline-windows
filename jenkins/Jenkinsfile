@@ -1,10 +1,8 @@
 pipeline {
     agent any
-
-    tools {
-        maven 'M3' // Asegúrate de tener Maven configurado como 'M3' en Jenkins
+    options {
+        skipStagesAfterUnstable()
     }
-
     stages {
         stage('Build') {
             steps {
